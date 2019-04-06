@@ -1,3 +1,8 @@
+.navbar-brand {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 .padded {
     padding: 1%;
 }
@@ -9,6 +14,11 @@
 .margin-tb {
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+.margin-lr {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .carousel-inner img {
