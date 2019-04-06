@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>welcome</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:rgb(35, 115, 168)">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Navbar</a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-info my-2 my-sm-0" type="submit">Go</button>
+            </form>
+        </div>
+    </nav>
+
+
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+
+                <div class="row">
+                    <div id="slider1" class="carousel slide" data-ride="carousel">
+
+                        <!-- Indicators -->
+                        <ul class="carousel-indicators">
+                            <li data-target="#slider1" data-slide-to="0" class="active"></li>
+                            <li data-target="#slider1" data-slide-to="1"></li>
+                            <li data-target="#slider1" data-slide-to="2"></li>
+                        </ul>
+
+                        <!-- The slideshow -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/book1.jpg" alt="book1" width="100%" height="100%">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/book2.jpg" alt="book2" width="100%" height="100%">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/book3.jpg" alt="book3" width="100%" height="100%">
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="carousel-control-prev" href="#slider1" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#slider1" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3 margin-tb">
+                        <div class="list-group list-group-flush margin-tb border border-primary rounded">
+                            <button type="button" class="list-group-item list-group-item-primary">
+                                <b>Catagories</b>
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action">Biographies &
+                                Memoirx</button>
+                            <button type="button" class="list-group-item list-group-item-action">Fiction &
+                                Literature</button>
+                            <button type="button" class="list-group-item list-group-item-action">Comics & Graphic
+                                models</button>
+                            <button type="button" class="list-group-item list-group-item-action">History</button>
+                            <button type="button" class="list-group-item list-group-item-action">Classics &
+                                Literature</button>
+                            <button type="button" class="list-group-item list-group-item-action">Self Care</button>
+                            <button type="button" class="list-group-item list-group-item-action">Health and
+                                Fitness</button>
+                            <button type="button" class="list-group-item list-group-item-action">Religion and
+                                Spirituality</button>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-8 margin-tb padded">
+
+                        <div class="row margin-tb">
+                            <h5>Recently Added Books</h5>
+                        </div>
+                        <div class="row margin-tb">
+                            <div id="slider2" class="carousel slide wide" data-ride="carousel">
+
+                                <!-- Indicators -->
+                                <ul class="carousel-indicators">
+                                    <li data-target="#slider2" data-slide-to="0" class="active"></li>
+                                    <li data-target="#slider2" data-slide-to="1"></li>
+                                    <li data-target="#slider2" data-slide-to="2"></li>
+                                </ul>
+
+                                <!-- The slideshow -->
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="d-flex flex-row">
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="d-flex flex-row">
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="d-flex flex-row">
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Left and right controls -->
+                                <a class="carousel-control-prev" href="#slider2" data-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#slider2" data-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="row margin-tb">
+                            <h5>Best Sellers</h5>
+                        </div>
+                        <div class="row margin-tb">
+                            <div id="slider2" class="carousel slide wide" data-ride="carousel">
+
+                                <!-- Indicators -->
+                                <ul class="carousel-indicators">
+                                    <li data-target="#slider2" data-slide-to="0" class="active"></li>
+                                    <li data-target="#slider2" data-slide-to="1"></li>
+                                    <li data-target="#slider2" data-slide-to="2"></li>
+                                </ul>
+
+                                <!-- The slideshow -->
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="d-flex flex-row">
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="d-flex flex-row">
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="d-flex flex-row">
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                            <div class="p-2">
+                                                <div>
+                                                    <img src="images/1.jpg" alt="1.jpg">
+                                                </div>
+                                                <div class="text-center">
+                                                    <p>The Reckoning</p>
+                                                    <p><i>by: John Grisham</i></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Left and right controls -->
+                                <a class="carousel-control-prev" href="#slider2" data-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#slider2" data-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-md-1"></div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
