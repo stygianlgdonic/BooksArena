@@ -1,0 +1,29 @@
+.container-fluid {
+    width: 80%;
+}
+.rounded {
+    border: 1px solid grey;
+    width: 80%;
+    height: 80%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.padded {
+    padding: 5%;
+}
+.form-control{
+    margin: 5%;
+}
+
+h3, label {
+    color: grey;
+}
+
+hr {
+    border-top: 1px solid grey;
+}
+
+a:hover {
+    text-decoration: none;
+    color: green;
+}
