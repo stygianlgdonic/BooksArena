@@ -11,6 +11,11 @@
     border-radius: 10px;
 }
 
+.loginmargin {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
 .margin-tb {
     margin-top: 5px;
     margin-bottom: 5px;
