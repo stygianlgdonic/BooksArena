@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="main.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
-        integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 
     <title>Books Arena</title>
 </head>
@@ -18,8 +17,7 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top" style="background-color:rgb(35, 115, 168)">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="homepage.html">Books Arena</a>
@@ -57,10 +55,8 @@
                         <div class="modal-body">
                             <form class=" form-horizontal">
 
-                                <input type="text" name="username_login" placeholder="Username"
-                                    class="form-control loginmargin" autocomplete="off">
-                                <input type="password" name="password_login" placeholder="Password"
-                                    class="form-control loginmargin">
+                                <input type="text" name="username_login" placeholder="Username" class="form-control loginmargin" autocomplete="off">
+                                <input type="password" name="password_login" placeholder="Password" class="form-control loginmargin">
                                 <br>
                                 <Label class="grey"><input type="checkbox" name="rememberme" checked="checked"> Remember
                                     me</Label>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -149,161 +145,6 @@
                     </div>
                     <div class="col-md-1"></div>
                     <div class="col-md-8 margin-tb padded">
-
-                        <div class="row margin-tb">
-                            <h5 class="border-bottom border-primary">Recently Added Books</h5>
-                        </div>
-                        <div class="row margin-tb">
-                            <div id="slider2" class="carousel slide wide" data-ride="carousel" data-interval="4000">
-
-                                <!-- The slideshow -->
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <div class="d-flex flex-row">
-                                            <div class="p-2">
-                                                <div>
-                                                    <img src="images/1.jpg" alt="1.jpg">
-                                                </div>
-                                                <div class="text-center">
-                                                    <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small>
-                                                    <a href="#" class=" fas fa-cart-plus" style="color:red;"></a>
-                                                </div>
-                                            </div>
-                                            <div class="p-2">
-                                                <div>
-                                                    <img src="images/1.jpg" alt="1.jpg">
-                                                </div>
-                                                <div class="text-center">
-                                                    <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small><a href="#"
-                                                        class=" fas fa-cart-plus" style="color:red;"></a>
-                                                </div>
-                                            </div>
-                                            <div class="p-2">
-                                                <div>
-                                                    <img src="images/1.jpg" alt="1.jpg">
-                                                </div>
-                                                <div class="text-center">
-                                                    <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small>
-                                                    <a href="#" class=" fas fa-cart-plus" style="color:red;"></a>
-                                                </div>
-                                            </div>
-                                            <div class="p-2">
-                                                <div>
-                                                    <img src="images/1.jpg" alt="1.jpg">
-                                                </div>
-                                                <div class="text-center">
-                                                    <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small><a href="#"
-                                                        class=" fas fa-cart-plus" style="color:red;"></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="d-flex flex-row">
-                                            <div class="p-2">
-                                                <div>
-                                                    <img src="images/1.jpg" alt="1.jpg">
-                                                </div>
-                                                <div class="text-center">
-                                                    <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small><a href="#"
-                                                        class=" fas fa-cart-plus" style="color:red;"></a>
-                                                </div>
-                                            </div>
-                                            <div class="p-2">
-                                                <div>
-                                                    <img src="images/1.jpg" alt="1.jpg">
-                                                </div>
-                                                <div class="text-center">
-                                                    <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small><a href="#"
-                                                        class=" fas fa-cart-plus" style="color:red;"></a>
-                                                </div>
-                                            </div>
-                                            <div class="p-2">
-                                                <div>
-                                                    <img src="images/1.jpg" alt="1.jpg">
-                                                </div>
-                                                <div class="text-center">
-                                                    <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small><a href="#"
-                                                        class=" fas fa-cart-plus" style="color:red;"></a>
-                                                </div>
-                                            </div>
-                                            <div class="p-2">
-                                                <div>
-                                                    <img src="images/1.jpg" alt="1.jpg">
-                                                </div>
-                                                <div class="text-center">
-                                                    <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small><a href="#"
-                                                        class=" fas fa-cart-plus" style="color:red;"></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="d-flex flex-row">
-                                            <div class="p-2">
-                                                <div>
-                                                    <img src="images/1.jpg" alt="1.jpg">
-                                                </div>
-                                                <div class="text-center">
-                                                    <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small><a href="#"
-                                                        class=" fas fa-cart-plus" style="color:red;"></a>
-                                                </div>
-                                            </div>
-                                            <div class="p-2">
-                                                <div>
-                                                    <img src="images/1.jpg" alt="1.jpg">
-                                                </div>
-                                                <div class="text-center">
-                                                    <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small><a href="#"
-                                                        class=" fas fa-cart-plus" style="color:red;"></a>
-                                                </div>
-                                            </div>
-                                            <div class="p-2">
-                                                <div>
-                                                    <img src="images/1.jpg" alt="1.jpg">
-                                                </div>
-                                                <div class="text-center">
-                                                    <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small><a href="#"
-                                                        class=" fas fa-cart-plus" style="color:red;"></a>
-                                                </div>
-                                            </div>
-                                            <div class="p-2">
-                                                <div>
-                                                    <img src="images/1.jpg" alt="1.jpg">
-                                                </div>
-                                                <div class="text-center">
-                                                    <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small><a href="#"
-                                                        class=" fas fa-cart-plus" style="color:red;"></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Left and right controls -->
-                                <a class="carousel-control-prev" href="#slider2" data-slide="prev">
-                                    <span class="carousel-control-prev-icon"></span>
-                                </a>
-                                <a class="carousel-control-next" href="#slider2" data-slide="next">
-                                    <span class="carousel-control-next-icon"></span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <hr>
-
                         <div class="row margin-tb">
                             <h5 class="border-bottom border-primary">Best Sellers</h5>
                         </div>
@@ -311,7 +152,50 @@
                             <div id="slider3" class="carousel slide wide" data-ride="carousel" data-interval="4500">
 
                                 <!-- The slideshow -->
-                                <div class="carousel-inner">
+                                <?php
+                                include_once('dbconnect.php');
+
+                                $query = "SELECT * FROM `books`";
+                                $result = mysqli_query($connection, $query);
+
+                                if (!$result) {
+                                    echo mysqli_error($connection);
+                                }
+                                if (mysqli_num_rows($result) > 0) {
+                                    ?>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="d-flex flex-row">
+
+                                                <?php
+                                                while ($row = mysqli_fetch_array($result)) {
+                                                    ?>
+
+                                                    <div class="p-2">
+                                                        <div>
+                                                            <img src="<?php echo $row[8]; ?>" alt="1.jpg">
+                                                        </div>
+                                                        <div class="text-center">
+                                                            <a href="#"><?php echo $row[1]; ?></a><br>
+                                                            <small><i>by: <?php echo $row[2]; ?></i></small><br><a href="#" class=" fas fa-cart-plus" style="color:red;"></a>
+                                                        </div>
+                                                    </div>
+
+
+                                                <?php
+                                            }
+                                            ?>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                <?php
+                            }
+                            ?>
+                                <!-- <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <div class="d-flex flex-row">
                                             <div class="p-2">
@@ -320,8 +204,7 @@
                                                 </div>
                                                 <div class="text-center">
                                                     <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small><a href="#"
-                                                        class=" fas fa-cart-plus" style="color:red;"></a>
+                                                    <small><i>by: John Grisham</i></small><a href="#" class=" fas fa-cart-plus" style="color:red;"></a>
                                                 </div>
                                             </div>
                                             <div class="p-2">
@@ -330,8 +213,7 @@
                                                 </div>
                                                 <div class="text-center">
                                                     <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small><a href="#"
-                                                        class=" fas fa-cart-plus" style="color:red;"></a>
+                                                    <small><i>by: John Grisham</i></small><a href="#" class=" fas fa-cart-plus" style="color:red;"></a>
                                                 </div>
                                             </div>
                                             <div class="p-2">
@@ -340,8 +222,7 @@
                                                 </div>
                                                 <div class="text-center">
                                                     <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small><a href="#"
-                                                        class=" fas fa-cart-plus" style="color:red;"></a>
+                                                    <small><i>by: John Grisham</i></small><a href="#" class=" fas fa-cart-plus" style="color:red;"></a>
                                                 </div>
                                             </div>
                                             <div class="p-2">
@@ -350,8 +231,7 @@
                                                 </div>
                                                 <div class="text-center">
                                                     <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small><a href="#"
-                                                        class=" fas fa-cart-plus" style="color:red;"></a>
+                                                    <small><i>by: John Grisham</i></small><a href="#" class=" fas fa-cart-plus" style="color:red;"></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -364,8 +244,7 @@
                                                 </div>
                                                 <div class="text-center">
                                                     <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small><a href="#"
-                                                        class=" fas fa-cart-plus" style="color:red;"></a>
+                                                    <small><i>by: John Grisham</i></small><a href="#" class=" fas fa-cart-plus" style="color:red;"></a>
                                                 </div>
                                             </div>
                                             <div class="p-2">
@@ -374,8 +253,7 @@
                                                 </div>
                                                 <div class="text-center">
                                                     <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small><a href="#"
-                                                        class=" fas fa-cart-plus" style="color:red;"></a>
+                                                    <small><i>by: John Grisham</i></small><a href="#" class=" fas fa-cart-plus" style="color:red;"></a>
                                                 </div>
                                             </div>
                                             <div class="p-2">
@@ -384,8 +262,7 @@
                                                 </div>
                                                 <div class="text-center">
                                                     <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small><a href="#"
-                                                        class=" fas fa-cart-plus" style="color:red;"></a>
+                                                    <small><i>by: John Grisham</i></small><a href="#" class=" fas fa-cart-plus" style="color:red;"></a>
                                                 </div>
                                             </div>
                                             <div class="p-2">
@@ -394,8 +271,7 @@
                                                 </div>
                                                 <div class="text-center">
                                                     <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small><a href="#"
-                                                        class=" fas fa-cart-plus" style="color:red;"></a>
+                                                    <small><i>by: John Grisham</i></small><a href="#" class=" fas fa-cart-plus" style="color:red;"></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -408,8 +284,7 @@
                                                 </div>
                                                 <div class="text-center">
                                                     <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small><a href="#"
-                                                        class=" fas fa-cart-plus" style="color:red;"></a>
+                                                    <small><i>by: John Grisham</i></small><a href="#" class=" fas fa-cart-plus" style="color:red;"></a>
                                                 </div>
                                             </div>
                                             <div class="p-2">
@@ -418,8 +293,7 @@
                                                 </div>
                                                 <div class="text-center">
                                                     <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small><a href="#"
-                                                        class=" fas fa-cart-plus" style="color:red;"></a>
+                                                    <small><i>by: John Grisham</i></small><a href="#" class=" fas fa-cart-plus" style="color:red;"></a>
                                                 </div>
                                             </div>
                                             <div class="p-2">
@@ -428,8 +302,7 @@
                                                 </div>
                                                 <div class="text-center">
                                                     <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small><a href="#"
-                                                        class=" fas fa-cart-plus" style="color:red;"></a>
+                                                    <small><i>by: John Grisham</i></small><a href="#" class=" fas fa-cart-plus" style="color:red;"></a>
                                                 </div>
                                             </div>
                                             <div class="p-2">
@@ -438,13 +311,12 @@
                                                 </div>
                                                 <div class="text-center">
                                                     <a href="#">The Reckoning</a><br>
-                                                    <small><i>by: John Grisham</i></small><a href="#"
-                                                        class=" fas fa-cart-plus" style="color:red;"></a>
+                                                    <small><i>by: John Grisham</i></small><a href="#" class=" fas fa-cart-plus" style="color:red;"></a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <!-- Left and right controls -->
                                 <a class="carousel-control-prev" href="#slider3" data-slide="prev">

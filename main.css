@@ -36,6 +36,11 @@
 }
 
 .p-2 {
-    margin-right: 5%;
-    margin-left: 5%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.p-2 img {
+    width: 100px;
+    height: 150px;
 }
