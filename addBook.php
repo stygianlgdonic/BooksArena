@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pic_tmpname = $_FILES['titlePage']['tmp_name'];
 
     if ($pic_size < 10000000) {
-        $destination = "images/" . $isbn . "-" . $pic_name;
+        $destination = "imgignore/" . $isbn . "-" . $pic_name;
         move_uploaded_file($pic_tmpname, $destination);
 
         $sqlAddBook = "INSERT INTO `booksarena`.`books` (`ISBN`, `title`,`author`,

@@ -26,21 +26,15 @@
     margin-right: 20px;
 }
 
-.carousel-inner img {
-      width: 100%;
-      height: 100%;
-}
-
 .wide {
     width: 100%;
 }
 
-.p-2 {
-    margin-right: 10%;
-    margin-left: 10%;
-}
-
-.p-2 img {
+.booksdisplay img {
     width: 100px;
     height: 150px;
+}
+
+.grey {
+    color: rgb(90, 90, 90);
 }
