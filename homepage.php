@@ -125,19 +125,19 @@
                     <div class="col-md-3 margin-tb">
                         <div class="list-group list-group-flush margin-tb border border-primary rounded">
                             <b class="list-group-item list-group-item-primary">Catagories</b>
-                            <a href="Biographyandmemoir.html" class="list-group-item list-group-item-action">Biographies
+                            <a href="Biographyandmemoir.php" class="list-group-item list-group-item-action">Biographies
                                 & Memoirs</a>
-                            <a href="Fictionandliterature.html" class="list-group-item list-group-item-action">Fiction &
+                            <a href="Fictionandliterature.php" class="list-group-item list-group-item-action">Fiction &
                                 Literature</a>
-                            <a href="ComicandGraphic.html" class="list-group-item list-group-item-action">Comics &
+                            <a href="ComicandGraphic.php" class="list-group-item list-group-item-action">Comics &
                                 Graphic models</a>
                             <a href="History.php" class="list-group-item list-group-item-action">History</a>
-                            <a href="Classics.html" class="list-group-item list-group-item-action">Classics &
+                            <a href="Classics.php" class="list-group-item list-group-item-action">Classics &
                                 Literature</a>
-                            <a href="SelfCare.html" class="list-group-item list-group-item-action">Self Care</a>
-                            <a href="healthandfitness.html" class="list-group-item list-group-item-action">Health &
+                            <a href="SelfCare.php" class="list-group-item list-group-item-action">Self Care</a>
+                            <a href="healthandfitness.php" class="list-group-item list-group-item-action">Health &
                                 Fitness</a>
-                            <a href="religion.html" class="list-group-item list-group-item-action">Religion &
+                            <a href="religion.php" class="list-group-item list-group-item-action">Religion &
                                 Spirituality</a>
                         </div>
                     </div>
@@ -176,7 +176,7 @@
                                                 <small><i>by: <?php echo $row[2]; ?></i></small>
                                             </div>
                                             <div class="row">
-                                                <a href="#" class=" fas fa-cart-plus" style="color:red;"></a>
+                                                <a href="#" class=" fas fa-cart-plus" style="color:red;"> Add to Cart</a>
                                             </div>
                                         </div>
 
@@ -200,7 +200,7 @@
                         <div class="row margin-tb">
                             <h5 class="border-bottom border-primary">Recent Arrivals</h5>
                         </div>
-                        <div class="row margin-tb">
+                        <div class="row margin-tb booksdisplay">
 
                             <?php
                             include_once('dbconnect.php');
@@ -230,7 +230,7 @@
                                                 <small><i>by: <?php echo $row[2]; ?></i></small>
                                             </div>
                                             <div class="row">
-                                                <a href="#" class=" fas fa-cart-plus" style="color:red;"></a>
+                                                <a href="#" class=" fas fa-cart-plus" style="color:red;"> Add to Cart</a>
                                             </div>
                                         </div>
 
@@ -258,6 +258,10 @@
 
         </div>
         <div class="col-md-1"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </body>
 

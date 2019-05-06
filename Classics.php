@@ -54,7 +54,7 @@
                     <?php
                     include_once('dbconnect.php');
 
-                    $query = "SELECT * FROM `books` WHERE `catagory` = 'classics'";
+                    $query = "SELECT * FROM `books` WHERE `catagory` = 'classic'";
                     $result = mysqli_query($connection, $query);
 
                     if (!$result) {
@@ -67,7 +67,7 @@
                             <?php
                             while ($row = mysqli_fetch_array($result)) {
                                 ?>
-                                <div class="col-md-4 margin-tb">
+                                <div class="col-md-2 margin-tb">
                                     <div class="row">
                                         <img src="<?php echo $row[8]; ?>" alt="1.jpg">
                                     </div>

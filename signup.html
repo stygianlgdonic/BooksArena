@@ -12,35 +12,60 @@
 
 <body">
     <div class="container-fluid">
-        <div class="row text-center">
+        <div class="row">
 
-            <div class="col-sm-2 col-md-4"></div>
-            <div class="col-sm-8 col-md-4 rounded padded">
+            <div class="col-sm-2 col-md-3"></div>
+            <div class="col-sm-8 col-md-6 rounded padded">
                 <div class="row">
 
                     <div class="col-sm-12 col-md-12 ">
-                        <h3 class="grey">Create Account</h3>
+                        <h3 class="grey text-center">Create Account</h3>
+                        <hr>
                         <form class="form-horizontal">
 
-                            <input type="text" name="firstname" placeholder="First Name" class="form-control"
-                                autocomplete="off">
-                            <input type="text" name="lastname" placeholder="Last Name" class="form-control"
-                                autocomplete="off">
-                            <input type="email" name="email_r" placeholder="Email Address" class="form-control"
-                                autocomplete="off">
-                            <input type="password" name="password_r" placeholder="Password" class="form-control">
-                            <input type="password" name="password_r" placeholder="Confirm Password"
-                                class="form-control">
+                            <div class="form-group">
+                                <label for="firstname">First Name</label>
+                                <input type="text" name="firstname" placeholder="Enter First Name" class="form-control"
+                                    autocomplete="off">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastname">Last Name</label>
+                                <input type="text" name="lastname" placeholder="Enter Last Name" class="form-control"
+                                    autocomplete="off">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email_r">Email</label>
+                                <input type="email" name="email_r" placeholder="Enter Email Address"
+                                    class="form-control" autocomplete="off">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password_r">Password</label>
+                                <input type="password" name="password_r" placeholder="Enter Password"
+                                    class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirmpassword">Confirm Password</label>
+                                <input type="password" name="password_r" placeholder="Confirm Password"
+                                    class="form-control">
+                            </div>
+
                             <br>
+
                             <input type="submit" name="register" value="Sign Up" class="btn btn-info">
-                            <a href="homepage.html" class="btn btn-danger">Cancel</a>
+
+                            <a href="homepage.php" class="btn btn-danger">Cancel</a>
+
                         </form>
                     </div>
 
                 </div>
 
             </div>
-            <div class="col-sm-2 col-md-4"></div>
+            <div class="col-sm-2 col-md-3"></div>
         </div>
     </div>
     </body>

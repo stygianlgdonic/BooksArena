@@ -67,7 +67,7 @@
                             <?php
                             while ($row = mysqli_fetch_array($result)) {
                                 ?>
-                                <div class="col-md-4 margin-tb">
+                                <div class="col-md-2 margin-tb">
                                     <div class="row">
                                         <img src="<?php echo $row[8]; ?>" alt="1.jpg">
                                     </div>
@@ -78,7 +78,7 @@
                                         <small><i>by: <?php echo $row[2]; ?></i></small>
                                     </div>
                                     <div class="row">
-                                        <a href="#" class=" fas fa-cart-plus" style="color:red;"></a>
+                                        <a href="#" class="fas fa-cart-plus" style="color:red;"></a>
                                     </div>
                                 </div>
 

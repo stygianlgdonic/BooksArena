@@ -53,7 +53,7 @@
                     <?php
                     include_once('dbconnect.php');
 
-                    $query = "SELECT * FROM `books` WHERE `catagory` = 'history'";
+                    $query = "SELECT * FROM `books` WHERE `catagory` = 'religion'";
                     $result = mysqli_query($connection, $query);
 
                     if (!$result) {
