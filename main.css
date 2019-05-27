@@ -38,3 +38,8 @@
 .grey {
     color: rgb(90, 90, 90);
 }
+
+.greenlink:hover {
+    text-decoration: none;
+    color: green;
+}

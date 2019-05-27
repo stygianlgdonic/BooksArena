@@ -28,10 +28,7 @@
                     <a class="nav-link" href="homepage.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <form class="form-inline my-2 my-lg-0 margin-lr">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-info my-2 my-sm-0" type="submit">Go</button>
-                    </form>
+                    <a class="nav-link" href="searchBooks.php"><b>Search Books</b></a>
                 </li>
             </ul>
 
@@ -53,7 +50,7 @@
 
                         <!-- Modal body -->
                         <div class="modal-body">
-                            <form class=" form-horizontal">
+                            <form class=" form-horizontal" action="validate.php" method="POST">
 
                                 <input type="text" name="username_login" placeholder="Username" class="form-control loginmargin" autocomplete="off">
                                 <input type="password" name="password_login" placeholder="Password" class="form-control loginmargin">
@@ -74,8 +71,6 @@
                     </div>
                 </div>
             </div>
-
-
 
             <a class="nav-link margin-lr btn btn-danger fas fa-cart-plus" href="cart.html"></a>
             <a href="userprofile.html" class='fas fa-user' style="color:white; "><small> Username</small></a>
@@ -205,7 +200,7 @@
                             <?php
                             include_once('dbconnect.php');
 
-                            $query = "SELECT * FROM `books`";
+                            $query = "SELECT * FROM `books` WHERE `publicationDate` >= '2019-04-01'";
                             $result = mysqli_query($connection, $query);
 
                             if (!$result) {
