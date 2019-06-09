@@ -83,7 +83,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3"></div>
-            <div class="col-md-6 rounded padded">
+            <div class="col-md-6 p-4">
                 <h3 class="grey">Add Book</h3>
                 <hr>
                 <form class="form-horizontal" action="addBook.php" method="POST" enctype="multipart/form-data">
