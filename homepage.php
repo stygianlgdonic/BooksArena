@@ -1,3 +1,39 @@
+<?php
+include_once('dbconnect.php');
+
+if (isset($_POST['login'])) {
+    $user = $_POST['username_login'];
+    $pwd = $_POST['password_login'];
+    $query = "SELECT * FROM users WHERE user_username='$user' && user_password='$pwd'";
+    $data = mysqli_query($connection, $query);
+    $total = mysqli_num_rows($data);
+    if ($total == 1) {
+            echo "<br>";
+            if(isset($_SESSION['user'])){
+            echo $_SESSION['user'];
+            }
+
+        // echo "<script>location.href='homepage.php';</script>";
+        // header("refresh:2; url=homepage.php");
+
+    } else {
+        echo "Login Failed!";
+        header("refresh:1; url=homepage.php");
+    }
+}
+?>
+
+<?php
+
+    session_start();
+    if (isset($_SESSION["user"])) {
+        $yourName = $_SESSION["user"];
+    } else {
+    $yourName = "null";
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,10 +71,19 @@
                 </li>
             </ul>
 
+            <a class="nav-link margin-lr btn btn-danger fas fa-cart-plus" href="cart.html"></a>
+
             <!-- Button to Open the Modal -->
+            <?php
+                if ($yourName == 'null') :
+            ?>
             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
                 Login
             </button>
+
+            <?php
+                endif;
+            ?>
 
             <!-- The Modal -->
             <div class="modal text-center" id="myModal">
@@ -53,7 +98,7 @@
 
                         <!-- Modal body -->
                         <div class="modal-body">
-                            <form class=" form-horizontal" action="validate.php" method="POST">
+                            <form class=" form-horizontal" action="homepage.php" method="POST">
 
                                 <input type="text" name="username_login" placeholder="Username" class="form-control loginmargin" autocomplete="off">
                                 <input type="password" name="password_login" placeholder="Password" class="form-control loginmargin">
@@ -69,14 +114,28 @@
                                 <br>
                                 <a href="signup.html" class="btn btn-info">Create Account</a>
                             </form>
+                            <?php
+                                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                                    $_SESSION["user"] = $user;
+                                }
+                            ?>
+
                         </div>
 
                     </div>
                 </div>
             </div>
 
-            <a class="nav-link margin-lr btn btn-danger fas fa-cart-plus" href="cart.html"></a>
-            <a href="userprofile.html" class='fas fa-user' style="color:white; "><small> Username</small></a>
+            <?php
+                if ($yourName != 'null') :
+            ?>
+
+            <a href="userprofile.html" class='fas fa-user' style="color:white; "><small><?php echo $yourName; ?></small></a>
+
+            <?php
+                endif;
+            ?>
+
         </div>
     </nav>
 

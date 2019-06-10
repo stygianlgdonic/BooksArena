@@ -76,7 +76,7 @@
             </div>
 
             <a class="nav-link margin-lr btn btn-danger fas fa-cart-plus" href="cart.html"></a>
-            <a href="userprofile.html" class='fas fa-user' style="color:white; "><small> Username</small></a>
+            <a href="userprofile.php" class='fas fa-user' style="color:white; "><small> Username</small></a>
         </div>
     </nav>
 

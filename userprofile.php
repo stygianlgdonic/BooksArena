@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,26 +19,28 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top" style="background-color:rgb(35, 115, 168)">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="homepage.html">Books Arena</a>
+        <a class="navbar-brand" href="homepage.php">Books Arena</a>
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="homepage.html">Home</a>
+                    <a class="nav-link" href="homepage.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <form class="form-inline my-2 my-lg-0 margin-lr">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-info my-2 my-sm-0" type="submit">Go</button>
-                    </form>
+                    <a class="nav-link" href="searchBooks.php"><b>Search Books</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.php"><b>Dashboard</b></a>
                 </li>
             </ul>
+
             <a class="nav-link margin-lr btn btn-danger fas fa-cart-plus" href="cart.html"></a>
-            <a href="userprofile.html" class='fas fa-user' style="color:white; "><small> Username</small></a>
+
+            <a href="userprofile.php" class='fas fa-user' style="color:white; "><small><?php echo $_SESSION['user']; ?></small></a>
+
         </div>
     </nav>
 
@@ -53,30 +58,18 @@
                         <div class="row">
                             <div class="col-sm-3 col-md-3 padded grey">
                                 <div class="row margin-tb">
-                                    <label for="name">Name</label>
-                                </div>
-                                <div class="row margin-tb">
-                                    <label for="email">Email</label>
+                                    <label for="email">Name</label>
                                 </div>
                                 <div class="row margin-tb">
                                     <label for="gender">Password</label>
                                 </div>
-                                <div class="row margin-tb">
-                                    <label for="phone">Phone</label>
-                                </div>
                             </div>
                             <div class="col-sm-9 col-md-9 padded grey">
                                 <div class="row margin-tb">
-                                    <label for="namevalue">Dummy Name</label>
-                                </div>
-                                <div class="row margin-tb">
-                                    <label for="emailvalue">dummy123@example.com</label>
+                                    <label for="namevalue"><?php echo $_SESSION['user']; ?></label>
                                 </div>
                                 <div class="row margin-tb">
                                     <label for="gendervalue">••••••••</label>
-                                </div>
-                                <div class="row margin-tb">
-                                    <label for="phonevalue">03491234567</label>
                                 </div>
                             </div>
                         </div>

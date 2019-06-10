@@ -9,7 +9,21 @@ if (isset($_POST['login'])) {
     $total = mysqli_num_rows($data);
     if ($total == 1) {
         echo "Login Successful";
+
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $_SESSION["user"] = $user;
+            }
+            echo "<br>";
+            if(isset($_SESSION['user'])){
+            echo $_SESSION['user'];
+            }
+
+        // echo "<script>location.href='homepage.php';</script>";
+        header("refresh:2; url=homepage.php");
+
     } else {
         echo "Login Failed!";
+        header("refresh:2; url=homepage.php");
     }
 }
+?>
