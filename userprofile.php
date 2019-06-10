@@ -73,6 +73,8 @@ session_start();
                                 </div>
                             </div>
                         </div>
+
+                        <a href="sessDestroy.php" class="btn btn-danger">Logout</a>
                     </div>
                 </div>
 

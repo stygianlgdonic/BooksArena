@@ -8,12 +8,11 @@ if (isset($_POST['login'])) {
     $data = mysqli_query($connection, $query);
     $total = mysqli_num_rows($data);
     if ($total == 1) {
-            echo "<br>";
             if(isset($_SESSION['user'])){
             echo $_SESSION['user'];
             }
 
-        // echo "<script>location.href='homepage.php';</script>";
+        echo "<script>location.href='homepage.php';</script>";
         // header("refresh:2; url=homepage.php");
 
     } else {
@@ -130,7 +129,7 @@ if (isset($_POST['login'])) {
                 if ($yourName != 'null') :
             ?>
 
-            <a href="userprofile.html" class='fas fa-user' style="color:white; "><small><?php echo $yourName; ?></small></a>
+            <a href="userprofile.php" class='fas fa-user' style="color:white; "><small><?php echo $yourName; ?></small></a>
 
             <?php
                 endif;
