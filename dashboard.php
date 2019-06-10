@@ -111,7 +111,7 @@
                             <th>Author</th>
                             <th>Publication Date</th>
                             <th>Catagory</th>
-                            <th>Discription</th>
+                            <th>Description</th>
                             <th>Actions</th>
                         </tr>
 
