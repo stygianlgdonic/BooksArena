@@ -44,9 +44,10 @@ $row = mysqli_fetch_assoc($result);
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 p-5">
             <h1>Edit Book</h1>
+            <hr>
             <form action="editBook.php" method="POST">
                 <input type="text" name="title" placeholder="Title" class="form-control" value="<?php echo $row['title']; ?>"><br>
                 <input type="text" name="author" placeholder="Author" class="form-control" value="<?php echo $row['author']; ?>"><br>
@@ -59,6 +60,6 @@ $row = mysqli_fetch_assoc($result);
                 <input type="submit" name="submit" class="btn btn-info float-left">
             </form>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-3"></div>
     </div>
 </div>

@@ -83,8 +83,7 @@
     <div class="container-fluid">
 
         <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-10">
+            <div class="col-md-12">
 
                 <div class="row">
                     <div id="slider1" class="carousel slide" data-ride="carousel" data-interval="5000">
@@ -120,23 +119,21 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-3 margin-tb">
-                        <div class="list-group list-group-flush margin-tb border border-primary rounded">
-                            <b class="list-group-item list-group-item-primary">Catagories</b>
-                            <a href="Biographyandmemoir.php" class="list-group-item list-group-item-action">Biographies
-                                & Memoirs</a>
-                            <a href="Fictionandliterature.php" class="list-group-item list-group-item-action">Fiction &
-                                Literature</a>
-                            <a href="ComicandGraphic.php" class="list-group-item list-group-item-action">Comics &
-                                Graphic models</a>
-                            <a href="History.php" class="list-group-item list-group-item-action">History</a>
-                            <a href="Classics.php" class="list-group-item list-group-item-action">Classics &
-                                Literature</a>
-                            <a href="SelfCare.php" class="list-group-item list-group-item-action">Self Care</a>
-                            <a href="healthandfitness.php" class="list-group-item list-group-item-action">Health &
-                                Fitness</a>
-                            <a href="religion.php" class="list-group-item list-group-item-action">Religion &
-                                Spirituality</a>
+                    <div class="col-md-3 p-4">
+                        <div class="card">
+                            <div class="card-header">
+                                Catagories
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><a href="Biographyandmemoir.php">Biographies & Memoirs</a></li>
+                                <li class="list-group-item"><a href="Fictionandliterature.php">Fiction & Literature</a></li>
+                                <li class="list-group-item"><a href="ComicandGraphic.php">Comics & Graphic models</a></li>
+                                <li class="list-group-item"><a href="History.php">History</a></li>
+                                <li class="list-group-item"><a href="Classics.php">Classics & Literature</a></li>
+                                <li class="list-group-item"><a href="SelfCare.php">Self Care</a></li>
+                                <li class="list-group-item"><a href="healthandfitness.php">Health & Fitness</a></li>
+                                <li class="list-group-item"><a href="religion.php">Religion & Spirituality</a></li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-md-1"></div>
@@ -180,7 +177,7 @@
 
                                         <?php
                                         $count++;
-                                        if ($count == 3) {
+                                        if ($count == 6) {
                                             break;
                                         }
                                     }
@@ -234,7 +231,7 @@
 
                                         <?php
                                         $count++;
-                                        if ($count == 3) {
+                                        if ($count == 6) {
                                             break;
                                         }
                                     }
@@ -250,7 +247,6 @@
                     </div>
 
                 </div>
-                <div class="col-md-1"></div>
 
             </div>
 
