@@ -168,7 +168,7 @@
                                                 <img src="<?php echo $row[8]; ?>" alt="1.jpg">
                                             </div>
                                             <div class="row">
-                                                <a href="#"><?php echo $row[1]; ?></a><br>
+                                               <?php echo' <a href="bookdetails.php?isbn=' . $row['ISBN'] . '">' . $row[1]; ?></a><br>
                                             </div>
                                             <div class="row">
                                                 <small><i>by: <?php echo $row[2]; ?></i></small>
@@ -255,7 +255,6 @@
             </div>
 
         </div>
-        <div class="col-md-1"></div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>

@@ -42,7 +42,7 @@
                             <th>Binding</th>
                             <th>Availability</th>
                             <th>Price</th>
-                            <th>Discription</th>
+                            <th>Description</th>
                             <th>Title Page</th>
                         </tr>
 

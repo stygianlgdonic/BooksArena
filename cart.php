@@ -23,12 +23,12 @@
       aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="homepage.html">Books Arena</a>
+    <a class="navbar-brand" href="homepage.php">Books Arena</a>
 
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item active">
-          <a class="nav-link" href="homepage.html">Home</a>
+          <a class="nav-link" href="homepage.php">Home</a>
         </li>
         <li class="nav-item">
           <form class="form-inline my-2 my-lg-0 margin-lr">
@@ -65,7 +65,14 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+
+          <tr>
+              <th scope="row">1</th>
+              <td> <?php 
+                   include_once 'dbconnect.php';
+
+                    ?>
+             <!-- <tr>
               <th scope="row">1</th>
               <td><a href="...">The Reckoning</a></td>
               <td>John Grisham</td>
@@ -121,7 +128,7 @@
 
                 </button>
               </td>
-            </tr>
+            </tr>  -->
           </tbody>
         </table>
         <p align="right"><button type="button" class="btn btn-danger" style="width:20%" data-toggle="tooltip"

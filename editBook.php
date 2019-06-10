@@ -52,7 +52,7 @@ $row = mysqli_fetch_assoc($result);
                 <input type="text" name="author" placeholder="Author" class="form-control" value="<?php echo $row['author']; ?>"><br>
                 <input type="date" name="publicationDate" placeholder="Publication Date" class="form-control" value="<?php echo $row['publicationDate']; ?>"><br>
                 <input type="text" name="binding" placeholder="Binding" class="form-control" value="<?php echo $row['binding']; ?>"><br>
-                <input type="text" name="availability" placeholder="Availability" class="form-control" value="<?php echo $row['availability']; ?>"><br>
+                <input type="text" name="availability" placeholder="Availability" class="form-control" value="<?php echo $row['binding']; ?>"><br>
                 <input type="text" name="price" placeholder="Price" class="form-control" value="<?php echo $row['price']; ?>"><br>
                 <input type="text" name="discription" placeholder="Discription" class="form-control" value="<?php echo $row['discription']; ?>"><br>
                 <input type="hidden" name="isbn" value="<?php echo $isbn; ?>">
