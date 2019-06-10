@@ -224,7 +224,7 @@ if (isset($_POST['login'])) {
                                                 <img src="<?php echo $row[8]; ?>" alt="1.jpg">
                                             </div>
                                             <div class="row">
-                                               <?php echo' <a href="bookdetails.php?isbn=' . $row['ISBN'] . '">' . $row[1]; ?></a><br>
+                                                <a href="#"><?php echo $row[1]; ?></a><br>
                                             </div>
                                             <div class="row">
                                                 <small><i>by: <?php echo $row[2]; ?></i></small>
