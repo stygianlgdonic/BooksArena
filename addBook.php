@@ -216,8 +216,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (mysqli_query($connection, $sqlAddBook)) {
             echo "Book added!";
-            // echo "<script>location.href='target-page.php';</script>";
-            header("refresh:2; url=homepage.php");
+            echo "<script>location.href='homepage.php';</script>";
+            // header("refresh:2; url=homepage.php");
         } else {
             echo "Error " . mysqli_error($connection);
         }

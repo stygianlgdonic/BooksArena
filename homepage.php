@@ -1,4 +1,12 @@
 <?php
+
+    session_start();
+    if (isset($_SESSION["user"])) {
+        $yourName = $_SESSION["user"];
+    } else {
+    $yourName = "null";
+    }
+
 include_once('dbconnect.php');
 
 if (isset($_POST['login'])) {
@@ -21,17 +29,6 @@ if (isset($_POST['login'])) {
         // header("refresh:1; url=homepage.php");
     }
 }
-?>
-
-<?php
-
-    session_start();
-    if (isset($_SESSION["user"])) {
-        $yourName = $_SESSION["user"];
-    } else {
-    $yourName = "null";
-    }
-
 ?>
 
 <!DOCTYPE html>

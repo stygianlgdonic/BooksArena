@@ -7,7 +7,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $sqlDeleteHero = "DELETE FROM `books` WHERE `ISBN`=" . $isbn . ";";
     if (mysqli_query($connection, $sqlDeleteHero)) {
         echo "Boook deleted";
-        header("refresh:2; url=allbooks.php");
+        echo "<script>location.href='allbooks.php';</script>";
+        // header("refresh:2; url=allbooks.php");
     } else {
         echo "Error " . mysqli_error($connection);
     }

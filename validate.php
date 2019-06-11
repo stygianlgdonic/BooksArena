@@ -18,12 +18,13 @@ if (isset($_POST['login'])) {
             echo $_SESSION['user'];
             }
 
-        // echo "<script>location.href='homepage.php';</script>";
-        header("refresh:2; url=homepage.php");
+            echo "<script>location.href='homepage.php';</script>";
+            // header("refresh:2; url=homepage.php");
 
     } else {
         echo "Login Failed!";
-        header("refresh:2; url=homepage.php");
+        echo "<script>location.href='homepage.php';</script>";
+        // header("refresh:2; url=homepage.php");
     }
 }
 ?>
