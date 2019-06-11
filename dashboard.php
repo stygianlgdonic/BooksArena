@@ -123,7 +123,15 @@
         }
         if (mysqli_num_rows($result) > 0) {
             ?>
-            <h2 class="grey text-center">All Books</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h2 class="grey text-center">All Books</h2>
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <a href="addBook.php" class="btn btn-primary">Add new Book</a>
+                </div>
+            </div>
             <hr>
             <div class="row">
                 <div class="col-md-1"></div>
