@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (isset($_SESSION["user"])) {
+  $yourName = $_SESSION["user"];
+} else {
+$yourName = "null";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,128 +26,191 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top" style="background-color:rgb(35, 115, 168)">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="homepage.php">Books Arena</a>
+<nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top" style="background-color:rgb(35, 115, 168)">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="homepage.php">Books Arena</a>
 
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="homepage.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <form class="form-inline my-2 my-lg-0 margin-lr">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-info my-2 my-sm-0" type="submit">Go</button>
-          </form>
-        </li>
-      </ul>
-      <a class="nav-link margin-lr btn btn-danger fas fa-cart-plus" href="cart.html"></a>
-      <a href="userprofile.html" class='fas fa-user' style="color:white; "><small> Username</small></a>
-    </div>
-  </nav>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12">
-        <h1
-          style="font-family: 'Dynalight';font-size: 50px; text-align: center; padding: 5%; text-shadow: 2px 2px 4px #000000  ">
-          Your Cart</h1>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="homepage.php">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="searchBooks.php"><b>Search Books</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.php"><b>Dashboard</b></a>
+                </li>
+            </ul>
+
+            <a class="nav-link margin-lr btn btn-danger fas fa-cart-plus" href="cart.html"></a>
+
+            <!-- Button to Open the Modal -->
+            <?php
+                if ($yourName == 'null') :
+            ?>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+                Login
+            </button>
+
+            <?php
+                endif;
+            ?>
+
+            <!-- The Modal -->
+            <div class="modal text-center" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Member Login</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <form class=" form-horizontal" action="homepage.php" method="POST">
+
+                                <input type="text" name="username_login" placeholder="Username" class="form-control loginmargin" autocomplete="off">
+                                <input type="password" name="password_login" placeholder="Password" class="form-control loginmargin">
+                                <br>
+                                <Label class="grey"><input type="checkbox" name="rememberme" checked="checked"> Remember
+                                    me</Label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <Label class="grey"><a href="lab6.html">Forgot Password?</a></Label>
+                                <br><br>
+                                <input type="submit" name="login" value="LOGIN" class="btn btn-info">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                <hr>
+                                <Label class="grey">You are not a member?</Label>
+                                <br>
+                                <a href="signup.html" class="btn btn-info">Create Account</a>
+                            </form>
+                            <?php
+                                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                                    $_SESSION["user"] = $user;
+                                }
+                            ?>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <?php
+                if ($yourName != 'null') :
+            ?>
+
+            <a href="userprofile.php" class='fas fa-user' style="color:white; "><small><?php echo $yourName; ?></small></a>
+
+            <?php
+                endif;
+            ?>
+
+        </div>
+    </nav>
+
+
+    <?php
+      if($yourName == 'null') :
+    ?>
+      <div class="container-fluid">
+        <div class="row text-center">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            Please Log In to view your cart!
+          </div>
+          <div class="col-md-4"></div>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-8">
-        <table class="table table-hover " style="width:100%">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Name</th>
-              <th scope="col">Author</th>
-              <th scope="col">Price <small>(Rs)</small></th>
-              <th scope="col">Purchase</th>
-              <th scope="col">&nbsp</th>
+    <?php
+      endif;
+    ?>
+    <?php
+      if($yourName != 'null') :
+    ?>
 
-            </tr>
-          </thead>
-          <tbody>
 
-          <tr>
-              <th scope="row">1</th>
-              <td> <?php 
-                   include_once 'dbconnect.php';
+    <?php
+    include_once('dbconnect.php');
 
-                    ?>
-             <!-- <tr>
-              <th scope="row">1</th>
-              <td><a href="...">The Reckoning</a></td>
-              <td>John Grisham</td>
-              <td>1550</td>
-              <td>
-                <div class="radio">&nbsp&nbsp&nbsp
-                  <label><input type="radio" name="optradio"></label>
+    $query = "SELECT * FROM `cart`";
+    $result = mysqli_query($connection, $query);
+
+    if (!$result) {
+        echo mysqli_error($connection);
+    }
+
+    if (mysqli_num_rows($result) > 0) {
+        ?>
+      <div class="container-fluid">
+
+        <div class="row text-center">
+
+                <div class="col-md-2"></div>
+
+                <div class="col-md-8 p-5">
+                    <h1>Your Cart</h1>
                 </div>
-              </td>
-              <td>
 
-                <button type="button" class="close" aria-label="Close">
+                <div class="col-md-2"></div>
 
-                  <span aria-hidden="true">&times;</span>
+            </div>
 
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td><a href="...">The Reckoning</a></td>
-              <td>John Grisham</td>
-              <td>1550</td>
-              <td>
-                <div class="radio">&nbsp&nbsp&nbsp
-                  <label><input type="radio" name="optradio"></label>
+            <div class="row">
+                <div class="col-md-2"></div>
+
+                <div class="col-md-8">
+                    <table class="table">
+                        <tr>
+                            <th>ID</th>
+                            <th>Book Title</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+
+                        <?php
+                        while ($row = mysqli_fetch_array($result)) {
+                            ?>
+                            <tr>
+                                <td>
+                                    <?php echo $row[0]; ?>
+                                </td>
+                                <td>
+                                    <?php echo $row[1]; ?>
+                                </td>
+                                <td>
+                                    <?php echo $row[2]; ?>
+                                </td>
+                                <td>
+                                    <?php echo '<a class="greenlink" href="deleteFromCart.php?cart_id=' . $row['cart_id'] . '">Delete</a>'; ?>
+                                </td>
+                            </tr>
+                        <?php
+                    }
+                }
+                ?>
+
+                </table>
+                <a href="#" class="btn btn-success float-right">Purchase</a>
+
                 </div>
-              </td>
-              <td>
 
-                <button type="button" class="close" aria-label="Close">
+                <div class="col-md-2"></div>
 
-                  <span aria-hidden="true">&times;</span>
 
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td><a href="...">The Reckoning</a></td>
-              <td>John Grisham</td>
-              <td>1550</td>
-              <td>
-                <div class="radio">&nbsp&nbsp&nbsp
-                  <label><input type="radio" name="optradio"></label>
-                </div>
-              </td>
-              <td>
-
-                <button type="button" class="close" aria-label="Close">
-
-                  <span aria-hidden="true">&times;</span>
-
-                </button>
-              </td>
-            </tr>  -->
-          </tbody>
-        </table>
-        <p align="right"><button type="button" class="btn btn-danger" style="width:20%" data-toggle="tooltip"
-            title="Purchase the selected Items">
-            Purchase
-          </button></p>
-
-      </div>
-      <div class="col-md-2"></div>
+        </div>
 
     </div>
+    <?php
+      endif;
+    ?>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </body>
 

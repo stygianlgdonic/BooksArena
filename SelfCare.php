@@ -1,3 +1,13 @@
+<?php
+
+    session_start();
+    if (isset($_SESSION["user"])) {
+        $yourName = $_SESSION["user"];
+    } else {
+    $yourName = "null";
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,10 +43,19 @@
                 </li>
             </ul>
 
+            <a class="nav-link margin-lr btn btn-danger fas fa-cart-plus" href="cart.php"></a>
+
             <!-- Button to Open the Modal -->
+            <?php
+                if ($yourName == 'null') :
+            ?>
             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
                 Login
             </button>
+
+            <?php
+                endif;
+            ?>
 
             <!-- The Modal -->
             <div class="modal text-center" id="myModal">
@@ -51,7 +70,7 @@
 
                         <!-- Modal body -->
                         <div class="modal-body">
-                            <form class=" form-horizontal" action="validate.php" method="POST">
+                            <form class=" form-horizontal" action="homepage.php" method="POST">
 
                                 <input type="text" name="username_login" placeholder="Username" class="form-control loginmargin" autocomplete="off">
                                 <input type="password" name="password_login" placeholder="Password" class="form-control loginmargin">
@@ -67,14 +86,28 @@
                                 <br>
                                 <a href="signup.html" class="btn btn-info">Create Account</a>
                             </form>
+                            <?php
+                                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                                    $_SESSION["user"] = $user;
+                                }
+                            ?>
+
                         </div>
 
                     </div>
                 </div>
             </div>
 
-            <a class="nav-link margin-lr btn btn-danger fas fa-cart-plus" href="cart.html"></a>
-            <a href="userprofile.html" class='fas fa-user' style="color:white; "><small> Username</small></a>
+            <?php
+                if ($yourName != 'null') :
+            ?>
+
+            <a href="userprofile.php" class='fas fa-user' style="color:white; "><small><?php echo $yourName; ?></small></a>
+
+            <?php
+                endif;
+            ?>
+
         </div>
     </nav>
 
@@ -112,13 +145,13 @@
                                         <img src="<?php echo $row[8]; ?>" alt="1.jpg">
                                     </div>
                                     <div class="row">
-                                        <a href="#"><?php echo $row[1]; ?></a><br>
+                                        <a href="bookdetails.php?isbn=<?php echo $row[0];?>"><?php echo $row[1]; ?></a><br>
                                     </div>
                                     <div class="row">
                                         <small><i>by: <?php echo $row[2]; ?></i></small>
                                     </div>
                                     <div class="row">
-                                        <a href="#" class=" fas fa-cart-plus" style="color:red;"></a>
+                                        <a href="addToCart.php?title=<?php echo $row[1];?>&price=<?php echo $row[6];?>" class=" fas fa-cart-plus" style="color:red;"></a>
                                     </div>
                                 </div>
 
@@ -138,6 +171,9 @@
 
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </body>
 

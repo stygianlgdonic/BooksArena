@@ -1,5 +1,12 @@
 <?php
-session_start();
+
+    session_start();
+    if (isset($_SESSION["user"])) {
+        $yourName = $_SESSION["user"];
+    } else {
+    $yourName = "null";
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +46,7 @@ session_start();
 
             <a class="nav-link margin-lr btn btn-danger fas fa-cart-plus" href="cart.html"></a>
 
-            <a href="userprofile.php" class='fas fa-user' style="color:white; "><small><?php echo $_SESSION['user']; ?></small></a>
+            <a href="userprofile.php" class='fas fa-user' style="color:white; "><small><?php echo $yourName ?></small></a>
 
         </div>
     </nav>
@@ -66,7 +73,7 @@ session_start();
                             </div>
                             <div class="col-sm-9 col-md-9 padded grey">
                                 <div class="row margin-tb">
-                                    <label for="namevalue"><?php echo $_SESSION['user']; ?></label>
+                                    <label for="namevalue"><?php echo $yourName; ?></label>
                                 </div>
                                 <div class="row margin-tb">
                                     <label for="gendervalue">••••••••</label>

@@ -17,7 +17,8 @@ if (isset($_POST['login'])) {
 
     } else {
         echo "Login Failed!";
-        header("refresh:1; url=homepage.php");
+        echo "<script>location.href='homepage.php';</script>";
+        // header("refresh:1; url=homepage.php");
     }
 }
 ?>
@@ -70,7 +71,7 @@ if (isset($_POST['login'])) {
                 </li>
             </ul>
 
-            <a class="nav-link margin-lr btn btn-danger fas fa-cart-plus" href="cart.html"></a>
+            <a class="nav-link margin-lr btn btn-danger fas fa-cart-plus" href="cart.php"></a>
 
             <!-- Button to Open the Modal -->
             <?php
@@ -223,13 +224,13 @@ if (isset($_POST['login'])) {
                                                 <img src="<?php echo $row[8]; ?>" alt="1.jpg">
                                             </div>
                                             <div class="row">
-                                                <a href="#"><?php echo $row[1]; ?></a><br>
+                                                <a href="bookdetails.php?isbn=<?php echo $row[0];?>"><?php echo $row[1]; ?></a><br>
                                             </div>
                                             <div class="row">
                                                 <small><i>by: <?php echo $row[2]; ?></i></small>
                                             </div>
                                             <div class="row">
-                                                <a href="#" class=" fas fa-cart-plus" style="color:red;"> Add to Cart</a>
+                                                <a href="addToCart.php?title=<?php echo $row[1];?>&price=<?php echo $row[6];?>" class=" fas fa-cart-plus" style="color:red;"> Add to Cart</a>
                                             </div>
                                         </div>
 
@@ -242,7 +243,6 @@ if (isset($_POST['login'])) {
                                 }
                                 ?>
                             </div>
-
 
                             <hr>
 
@@ -277,13 +277,13 @@ if (isset($_POST['login'])) {
                                                 <img src="<?php echo $row[8]; ?>" alt="1.jpg">
                                             </div>
                                             <div class="row">
-                                                <a href="#"><?php echo $row[1]; ?></a><br>
+                                                <a href="bookdetails.php?isbn=<?php echo $row[0];?>"><?php echo $row[1]; ?></a><br>
                                             </div>
                                             <div class="row">
                                                 <small><i>by: <?php echo $row[2]; ?></i></small>
                                             </div>
                                             <div class="row">
-                                                <a href="#" class=" fas fa-cart-plus" style="color:red;"> Add to Cart</a>
+                                                <a href="addToCart.php?title=<?php echo $row[1];?>&price=<?php echo $row[6];?>" class=" fas fa-cart-plus" style="color:red;"> Add to Cart</a>
                                             </div>
                                         </div>
 
