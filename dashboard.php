@@ -111,6 +111,26 @@
         </div>
     </nav>
 
+    <?php
+      if($yourName == 'null') :
+    ?>
+      <div class="container-fluid">
+        <div class="row text-center">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            Please Log In as Administrator to access Dashboard!
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+      </div>
+    <?php
+      endif;
+    ?>
+    <?php
+      if($yourName == 'admin') :
+    ?>
+
+
     <div class="container-fluid padded">
         <?php
         include_once('dbconnect.php');
@@ -194,6 +214,9 @@
         }
         ?>
         </div>
+        <?php
+            endif;
+        ?>
         <script>
             function ajaxFunction() {
                 var ajaxRequest; // The variable that makes Ajax possible!

@@ -28,7 +28,7 @@ if (mysqli_num_rows($result) > 0) :
                     <img src="<?php echo $row[8]; ?>" alt="1.jpg">
                 </td>
                 <td>
-                    <?php echo $row[1]; ?>
+                    <a href="bookdetails.php?isbn=<?php echo $row[0];?>"><?php echo $row[1]; ?></a><br>
                 </td>
                 <td>
                     <?php echo $row[2]; ?>

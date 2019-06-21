@@ -1,13 +1,14 @@
 <?php
 
     session_start();
+    include_once('dbconnect.php');
+
     if (isset($_SESSION["user"])) {
         $yourName = $_SESSION["user"];
     } else {
     $yourName = "null";
     }
 
-include_once('dbconnect.php');
 
 if (isset($_POST['login'])) {
     $user = $_POST['username_login'];
@@ -25,6 +26,8 @@ if (isset($_POST['login'])) {
 
     } else {
         echo "Login Failed!";
+        session_unset(); 
+        session_destroy();
         echo "<script>location.href='homepage.php';</script>";
         // header("refresh:1; url=homepage.php");
     }
@@ -197,7 +200,7 @@ if (isset($_POST['login'])) {
                         <div class="row margin-tb">
                             <h5 class="border-bottom border-primary">Best Sellers</h5>
                         </div>
-                        <div class="row margin-tb booksdisplay">
+                        <div class="row mt-3 mb-3 booksdisplay">
 
                             <?php
                             include_once('dbconnect.php');
@@ -216,7 +219,7 @@ if (isset($_POST['login'])) {
                                     $count = 0;
                                     while ($row = mysqli_fetch_array($result)) {
                                         ?>
-                                        <div class="col-md-4 margin-tb">
+                                        <div class="col-md-4 mt-3 mb-3">
                                             <div class="row">
                                                 <img src="<?php echo $row[8]; ?>" alt="1.jpg">
                                             </div>
@@ -227,7 +230,7 @@ if (isset($_POST['login'])) {
                                                 <small><i>by: <?php echo $row[2]; ?></i></small>
                                             </div>
                                             <div class="row">
-                                                <a href="addToCart.php?title=<?php echo $row[1];?>&price=<?php echo $row[6];?>" class=" fas fa-cart-plus" style="color:red;"> Add to Cart</a>
+                                                <a href="addToCart.php?title=<?php echo $row[1];?>&price=<?php echo $row[6];?>" class="btn fas fa-cart-plus" style="color:red;"> Add to Cart</a>
                                             </div>
                                         </div>
 
@@ -280,7 +283,7 @@ if (isset($_POST['login'])) {
                                                 <small><i>by: <?php echo $row[2]; ?></i></small>
                                             </div>
                                             <div class="row">
-                                                <a href="addToCart.php?title=<?php echo $row[1];?>&price=<?php echo $row[6];?>" class=" fas fa-cart-plus" style="color:red;"> Add to Cart</a>
+                                                <a href="addToCart.php?title=<?php echo $row[1];?>&price=<?php echo $row[6];?>" class="btn fas fa-cart-plus" style="color:red;"> Add to Cart</a>
                                             </div>
                                         </div>
 
