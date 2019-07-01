@@ -152,7 +152,7 @@
                                         <small><i>by: <?php echo $row[2]; ?></i></small>
                                     </div>
                                     <div class="row">
-                                        <a href="addToCart.php?title=<?php echo $row[1];?>&price=<?php echo $row[6];?>" class=" fas fa-cart-plus" style="color:red;"></a>
+                                        <a href="Classics.php?title=<?php echo $row[1];?>&price=<?php echo $row[6];?>&click=1" class="btn fas fa-cart-plus" style="color:red;"> Add To Cart</a>
                                     </div>
                                 </div>
 
@@ -179,3 +179,23 @@
 </body>
 
 </html>
+
+<?php
+if($_SERVER['REQUEST_METHOD']==='GET'){
+    if(isset($_GET['click'])){
+
+        $title = $_REQUEST['title'];
+        $price = $_REQUEST['price'];
+    
+        $sqlAddItem = "INSERT INTO `cart` (`title`, `price`) VALUES ('$title', '$price')";
+    
+        if (mysqli_query($connection, $sqlAddItem)) {
+            echo "Book added to cart!";
+        } else {
+            echo "Error " . mysqli_error($connection);
+        }
+    }
+
+}
+    
+?>

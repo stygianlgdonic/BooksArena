@@ -112,13 +112,13 @@
     </nav>
 
     <?php
-      if($yourName == 'null') :
+      if($yourName != 'admin') :
     ?>
       <div class="container-fluid">
         <div class="row text-center">
           <div class="col-md-4"></div>
           <div class="col-md-4">
-            Please Log In as Administrator to access Dashboard!
+            Please Log In as 'admin' to access Dashboard!
           </div>
           <div class="col-md-4"></div>
         </div>

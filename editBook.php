@@ -29,8 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mysqli_query($connection, $sqlAddHero)) {
         echo "Book Edited!";
-        echo "<script>location.href='allbooks.php';</script>";
-        // header("refresh:2; url=allbooks.php");
+        echo "<script>location.href='dashboard.php';</script>";
     } else {
         echo "Error " . mysqli_error($connection);
     }
