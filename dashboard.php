@@ -7,6 +7,10 @@
     $yourName = "null";
     }
 
+    if(isset($_GET['name'])) {
+        $yourName = "admin";
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +43,7 @@
                     <a class="nav-link" href="searchBooks.php"><b>Search Books</b></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="dashboard.php"><b>Dashboard</b></a>
+                    <a class="nav-link" href="dashboard.php?name=1"><b>Dashboard</b></a>
                 </li>
             </ul>
 

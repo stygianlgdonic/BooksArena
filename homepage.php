@@ -317,3 +317,22 @@ if (isset($_POST['login'])) {
 </body>
 
 </html>
+<?php
+if($_SERVER['REQUEST_METHOD']==='GET'){
+    if(isset($_GET['click'])){
+
+        $title = $_REQUEST['title'];
+        $price = $_REQUEST['price'];
+    
+        $sqlAddItem = "INSERT INTO `cart` (`title`, `price`) VALUES ('$title', '$price')";
+    
+        if (mysqli_query($connection, $sqlAddItem)) {
+            echo "Book added to cart!";
+        } else {
+            echo "Error " . mysqli_error($connection);
+        }
+    }
+
+}
+    
+?>
